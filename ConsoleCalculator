@@ -1,0 +1,60 @@
+
+
+def add( res, num):
+    res += num
+    
+    print(res)
+    return res
+
+def subtr(res, num):
+    res -= num
+    print(res)
+    return res
+
+def multi(res, num):
+    res *= num
+    print(res)
+    return res
+
+def divi(res, num):
+    res /= num
+    print(res)
+    return res
+
+
+
+
+def start():
+    
+    res = 0
+    
+    num = 0
+    operator = "+"
+
+    while operator != "=" : 
+
+        if operator == '+' :
+            res = add(res,num)
+
+        elif operator == '-' :
+            res = subtr(res, num)
+
+        elif operator == '*' :
+            res = multi(res, num)
+
+        elif operator == '/' :
+            res = divi(res, num)
+        
+
+        else:
+            print("Wrong operator!")
+
+        operator = str(input("Enter operator"))
+
+        if operator == "=":
+            print(res)
+            break
+
+        num = float(input("Enter nr: "))
+
+start()
